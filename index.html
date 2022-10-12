@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS CDN for swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <!-- Styles link -->
+    <link rel="stylesheet" href="styles.css">
+    <!---font awesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Calebrare</title>
+
+    <link rel="shortcut icon" href="./Assects/Logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav id="nav">
+        <div class="nav-center">
+            <!-- nav header -->
+            <div class="nav-header">
+                <img src="./Assects/Logo.png" class="logo" alt="logo" />
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <!-- links -->
+            <ul class="links">
+                <li>
+                    <a href="#">Weeding Cards</a>
+                </li>
+                <li>
+                    <a href="#">Birthday carrds</a>
+                </li>
+                <li>
+                    <a href="#">Feeling cards</a>
+                </li>
+                <li>
+                    <a href="#">Anniversary cards</a>
+                </li>
+            </ul>
+            <!-- signup | login -->
+            <ul class="auth-links">
+                <li>
+                    <a href="#">
+                        Signup
+                    </a>
+                </li>
+                <span>|</span>
+                <li>
+                    <a href="#">
+                        login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- slider and pricing  -->
+    <div class="bg-swiper">
+        <h1>Digital card details</h1>
+
+        <div class="main-card">
+
+
+            <!--  Slider, I used swiper for making a slider -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./Assects/Page1.jpg" />
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="./Assects/Page2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./Assects//Page3.jpg" />
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+
+            <!-- Price card -->
+            <div class="price-card">
+                <div class="card-info">
+                    <h2>Card title</h2>
+                    <div class="pricing">
+                        <div class="price">
+                            <h3 class="price1">$499</h3>
+                            <small class="price2">$2000</small>
+                        </div>
+                        <h3 class="price3">$75% off</h3>
+                    </div>
+
+                    <p>
+                        Donec eu ornare mi. Sed finibus
+                        condimentum mauris, ut dictum eros
+                        maximus vitae. Nullam
+                        condimentum tortor ac elit feugiat
+                        iaculis. Aenean mauris nisl, blandit
+                    </p>
+                </div>
+
+                <button class="btn">Try this card</button>
+            </div>
+        </div>
+
+        <!-- Main feature lay layout-->
+        <div class="main-feature">
+            <h1 class="feature-title">Features</h1>
+
+            <div class="grid-items">
+                <div class="item">
+                    <div class="donut"></div>
+                    <h3>Create your card in just 5 mins</h3>
+                </div>
+                <div class="item">
+                    <div class="donut"></div>
+                    <h3>Create your card in just 5 mins</h3>
+                </div>
+                <div class="item">
+                    <div class="donut"></div>
+                    <h3>Create your card in just 5 mins</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper CDN  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+
+        // JavaScript for Navbar.
+        const navToggle = document.querySelector(".nav-toggle");
+        const links = document.querySelector(".links");
+        const authLinks = document.querySelector(".auth-links")
+
+        navToggle.addEventListener("click", function () {
+            links.classList.toggle("show-links");
+            authLinks.classList.toggle("show-links")
+        });
+
+
+        // JavaScript for slider.
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+</body>
+
+</html>
